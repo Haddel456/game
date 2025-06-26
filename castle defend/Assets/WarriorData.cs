@@ -75,6 +75,14 @@ public class WarriorDataSO : ScriptableObject
     void OnEnable()
     {
         BuildWarriorDictionary();
+
+#if UNITY_EDITOR
+        if (levels == null || levels.Count == 0)
+        {
+            Debug.Log("Generating default level configurations...");
+            GenerateDefaultLevels();
+        }
+#endif
     }
 
     void BuildWarriorDictionary()
@@ -100,5 +108,46 @@ public class WarriorDataSO : ScriptableObject
     public LevelConfiguration GetLevelConfiguration(int levelNumber)
     {
         return levels.Find(level => level.levelNumber == levelNumber);
+    }
+
+    void GenerateDefaultLevels()
+    {
+        levels = new List<LevelConfiguration>();
+
+        // Level 1 - Basic only
+        levels.Add(new LevelConfiguration
+        {
+            levelNumber = 1,
+            levelName = "Level 1",
+            warriorSpawns = new List<WarriorSpawnData>
+            {
+                new WarriorSpawnData { warriorType = WarriorType.Basic, count = 10 }
+            }
+        });
+
+        // Level 2 - Basic + Soldier
+        levels.Add(new LevelConfiguration
+        {
+            levelNumber = 2,
+            levelName = "Level 2",
+            warriorSpawns = new List<WarriorSpawnData>
+            {
+                new WarriorSpawnData { warriorType = WarriorType.Basic, count = 5 },
+                new WarriorSpawnData { warriorType = WarriorType.Soldier, count = 10 }
+            }
+        });
+
+        // Level 3 - Basic + Soldier + Armored
+        levels.Add(new LevelConfiguration
+        {
+            levelNumber = 3,
+            levelName = "Level 3",
+            warriorSpawns = new List<WarriorSpawnData>
+            {
+                new WarriorSpawnData { warriorType = WarriorType.Basic, count = 3 },
+                new WarriorSpawnData { warriorType = WarriorType.Soldier, count = 7 },
+                new WarriorSpawnData { warriorType = WarriorType.Armored, count = 10 }
+            }
+        });
     }
 }

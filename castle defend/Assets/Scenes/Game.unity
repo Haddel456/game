@@ -123,6 +123,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &84244542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84244544}
+  - component: {fileID: 84244543}
+  m_Layer: 0
+  m_Name: 'GameManager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &84244543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84244542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc50234e85081647b4cb23eb0590602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuScene: MainMenu
+  gameScene: GameScene
+  levelCompleteScene: LevelComplete
+  gameOverScene: 
+  gameWinScene: GameWin
+  maxLevels: 4
+  warriorDataSO: {fileID: 0}
+--- !u!4 &84244544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84244542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.058359, y: 1.4501398, z: 101.95471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97376100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,8 +1160,8 @@ MonoBehaviour:
   warriorDataSO: {fileID: 11400000, guid: e53320b61e19f70488e709a2d923e3b8, type: 2}
   currentLevel: 1
   spawnParent: {fileID: 871189573}
-  castle: {fileID: 0}
-  castleHealth: {fileID: 0}
+  castle: {fileID: 497868845}
+  castleHealth: {fileID: 497868850}
 --- !u!4 &606568003
 Transform:
   m_ObjectHideFlags: 0
@@ -1276,7 +1327,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 714074338}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &827027699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,3 +3369,4 @@ SceneRoots:
   - {fileID: 411274113}
   - {fileID: 606568003}
   - {fileID: 871189573}
+  - {fileID: 84244544}
