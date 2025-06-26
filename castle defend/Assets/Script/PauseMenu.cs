@@ -7,11 +7,13 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pausMenu;
     [SerializeField] GameObject pauseButton;
+    [SerializeField] GameObject HealthBar;
 
     public void Pause()
     {
         pausMenu.SetActive(true);
         pauseButton.SetActive(false);
+        HealthBar.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -19,6 +21,7 @@ public class PauseMenu : MonoBehaviour
     {
         pausMenu.SetActive(false);
         pauseButton.SetActive(true);
+        HealthBar.SetActive(true);
         Time.timeScale = 1;
     }
 
