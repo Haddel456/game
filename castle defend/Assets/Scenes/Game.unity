@@ -158,7 +158,7 @@ MonoBehaviour:
   gameOverScene: 
   gameWinScene: GameWin
   maxLevels: 4
-  warriorDataSO: {fileID: 0}
+  warriorDataSO: {fileID: 11400000, guid: 26c7149068444f94ea12aac9fbb6d842, type: 2}
 --- !u!4 &84244544
 Transform:
   m_ObjectHideFlags: 0
@@ -952,7 +952,7 @@ Transform:
   m_GameObject: {fileID: 497868845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.3, y: -4.3, z: 0}
+  m_LocalPosition: {x: 48.1, y: -4.3, z: 0}
   m_LocalScale: {x: 1.846024, y: 2.4664214, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5b9499dee8f7e47a4b141332df5940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warriorDataSO: {fileID: 11400000, guid: e53320b61e19f70488e709a2d923e3b8, type: 2}
+  warriorDataSO: {fileID: 11400000, guid: 26c7149068444f94ea12aac9fbb6d842, type: 2}
   currentLevel: 1
   spawnParent: {fileID: 871189573}
   castle: {fileID: 497868845}
@@ -1216,7 +1216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280, y: 142.3}
+  m_AnchoredPosition: {x: 286.3, y: 174}
   m_SizeDelta: {x: 209.421, y: 24.331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714074340
@@ -1367,8 +1367,8 @@ Transform:
   m_GameObject: {fileID: 827027699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.2433, y: -1.1823, z: 10}
-  m_LocalScale: {x: 5.762756, y: 4.233665, z: 1}
+  m_LocalPosition: {x: 1.779, y: -2.1881, z: 10}
+  m_LocalScale: {x: 5.5063133, y: 4.419946, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1213200031}
@@ -3123,7 +3123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40.2, y: -20}
+  m_AnchoredPosition: {x: 40.200012, y: -20}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914888333
