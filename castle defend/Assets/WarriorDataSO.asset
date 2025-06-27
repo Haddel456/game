@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: WarriorDataSO
   m_EditorClassIdentifier: Assembly-CSharp::WarriorDataSO
   allWarriors:
-  - warriorName: Basic Warrior
+  - warriorName: Basic warrior
     type: 0
     prefab: {fileID: 7193345854964035924, guid: dcbd6d52889442e4cbcc0c277fb446dc, type: 3}
     warriorSprite: {fileID: 0}
-    health: 100
-    damage: 2
-    baseSpeed: 2
+    health: 150
+    damage: 20
+    baseSpeed: 2.5
     attackRate: 0
     killHeightPercentage: 0.5
     dragResistance: 1
-  - warriorName: Soldier
+  - warriorName: Soldier warrior
     type: 1
     prefab: {fileID: 3187974223909963065, guid: 605c490fdb507f748ac6b954f85aa63d, type: 3}
     warriorSprite: {fileID: 0}
-    health: 100
-    damage: 4
-    baseSpeed: 1.5
+    health: 200
+    damage: 30
+    baseSpeed: 2
     attackRate: 0
     killHeightPercentage: 0.5
     dragResistance: 1.5
@@ -37,70 +37,49 @@ MonoBehaviour:
     type: 2
     prefab: {fileID: 429795917136090437, guid: cdbf41be31ae43f47a09844816a3fb46, type: 3}
     warriorSprite: {fileID: 0}
-    health: 100
-    damage: 8
-    baseSpeed: 1
+    health: 350
+    damage: 15
+    baseSpeed: 1.2
     attackRate: 0
     killHeightPercentage: 0.5
     dragResistance: 2
   levels:
   - levelNumber: 1
-    levelName: First Wave
+    levelName: Level 1
     warriorSpawns:
     - warriorType: 0
-      count: 4
-    - warriorType: 1
-      count: 4
-    - warriorType: 2
-      count: 2
+      count: 10
     speedMultiplier: 1
     damageMultiplier: 1
-    minSpawnDelay: 0.5
-    maxSpawnDelay: 5
+    minSpawnDelay: 0
+    maxSpawnDelay: 3
     spawnYRange: {x: -13, y: 0}
     spawnXPosition: -27
   - levelNumber: 2
-    levelName: Reinforcement
+    levelName: Level 2
     warriorSpawns:
     - warriorType: 0
-      count: 3
+      count: 5
     - warriorType: 1
-      count: 6
-    - warriorType: 2
-      count: 4
-    speedMultiplier: 1.2
-    damageMultiplier: 1.1
-    minSpawnDelay: 0.5
-    maxSpawnDelay: 5
+      count: 10
+    speedMultiplier: 1
+    damageMultiplier: 1
+    minSpawnDelay: 0
+    maxSpawnDelay: 2
     spawnYRange: {x: -13, y: 0}
     spawnXPosition: -27
   - levelNumber: 3
-    levelName: Heavy Assault
+    levelName: Level 3
     warriorSpawns:
     - warriorType: 0
-      count: 2
-    - warriorType: 1
       count: 5
-    - warriorType: 2
-      count: 8
-    speedMultiplier: 1.4
-    damageMultiplier: 1.2
-    minSpawnDelay: 0.5
-    maxSpawnDelay: 5
-    spawnYRange: {x: -13, y: 0}
-    spawnXPosition: -27
-  - levelNumber: 4
-    levelName: Final Stand
-    warriorSpawns:
-    - warriorType: 0
-      count: 1
     - warriorType: 1
-      count: 4
+      count: 7
     - warriorType: 2
-      count: 12
-    speedMultiplier: 1.6
-    damageMultiplier: 1.3
+      count: 10
+    speedMultiplier: 1
+    damageMultiplier: 1
     minSpawnDelay: 0.5
-    maxSpawnDelay: 5
+    maxSpawnDelay: 1.5
     spawnYRange: {x: -13, y: 0}
     spawnXPosition: -27
