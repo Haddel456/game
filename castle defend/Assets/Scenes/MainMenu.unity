@@ -518,9 +518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 516daed6b1073094e9a1fcba7e54f39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundOn: {fileID: 0}
-  soundOff: {fileID: 0}
-  muted: 0
 --- !u!1 &1207626062
 GameObject:
   m_ObjectHideFlags: 0
