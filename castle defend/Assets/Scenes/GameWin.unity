@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 135001247}
   - component: {fileID: 135001249}
   - component: {fileID: 135001248}
+  - component: {fileID: 135001250}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -275,6 +276,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135001246}
   m_CullTransparentMesh: 1
+--- !u!114 &135001250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135001246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35f998cf86a56a48a25a7e527c1da2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &207265156
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +504,7 @@ GameObject:
   - component: {fileID: 705925721}
   - component: {fileID: 705925720}
   m_Layer: 5
-  m_Name: Restart
+  m_Name: Play again
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,7 +573,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 705925721}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135001250}
+        m_TargetAssemblyTypeName: GameActions, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &705925721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,7 +797,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1852925400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135001250}
+        m_TargetAssemblyTypeName: GameActions, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1852925400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,7 +1220,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: 'Play Again
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 9ad269c99dcf42b7aedefd83dd5a7b9d, type: 2}
