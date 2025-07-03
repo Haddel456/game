@@ -11,7 +11,6 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 - [Objectives & Goals](#objectives--goals)  
 - [Game Mechanics & Features](#game-mechanics--features)  
 - [System Requirements](#system-requirements)  
-- [Known Issues & Troubleshooting](#known-issues--troubleshooting)  
 - [Additional Notes](#additional-notes)  
 
 ---
