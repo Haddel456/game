@@ -38,6 +38,8 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 - Letting enemies reach the castle decreases your health.
 
 ### Levels
+- The game follows a **consecutive level system** — players must finish one level to unlock the next.
+- No manual level selection — progression is automatic.
 - **Level 1**: Basic Warrior only.
 - **Level 2**: Basic  + Soldier Warrior type.
 - **Level 3**: Basic  + Soldier + Armored Warrior type.
