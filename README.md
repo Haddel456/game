@@ -102,7 +102,9 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 
 - **Game Version**: 1.0  
 - **Last Updated**: July 3, 2025 
-- **Demo Video**: _Coming Soon_ 🎥  
+- **Demo Video**: _Coming Soon_ 🎥
+- 
+🎨 Sprites used: [Free Warrior 4 Direction Character - CraftPix](https://craftpix.net/freebies/free-warrior-4-direction-character-sprites/?num=1&count=367&sq=warrior&pos=14)
 
 ---
 
