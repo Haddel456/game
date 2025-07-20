@@ -18,7 +18,7 @@ MonoBehaviour:
     prefab: {fileID: 7193345854964035924, guid: dcbd6d52889442e4cbcc0c277fb446dc, type: 3}
     warriorSprite: {fileID: 0}
     health: 100
-    damage: 2
+    damage: 1
     baseSpeed: 2
     attackRate: 0
     killHeightPercentage: 0.5
@@ -28,7 +28,7 @@ MonoBehaviour:
     prefab: {fileID: 3187974223909963065, guid: 605c490fdb507f748ac6b954f85aa63d, type: 3}
     warriorSprite: {fileID: 0}
     health: 100
-    damage: 4
+    damage: 2
     baseSpeed: 1.5
     attackRate: 0
     killHeightPercentage: 0.5
@@ -38,7 +38,7 @@ MonoBehaviour:
     prefab: {fileID: 429795917136090437, guid: cdbf41be31ae43f47a09844816a3fb46, type: 3}
     warriorSprite: {fileID: 0}
     health: 100
-    damage: 8
+    damage: 4
     baseSpeed: 1
     attackRate: 0
     killHeightPercentage: 0.5
