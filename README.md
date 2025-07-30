@@ -41,8 +41,8 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 -- The game follows a **consecutive level system** — players must finish one level to unlock the next.
 -- No manual level selection — progression is automatic.
 - **Level 1**: Basic Warrior only.
-- **Level 2**: Soldier Warrior type.
-- **Level 3**: Armored Warrior type.
+- **Level 2**: Soldier Warrior only.
+- **Level 3**: Armored Warrior only.
 - **Level 4**: Basic  + Soldier + Armored Warrior type.
 
 
@@ -104,7 +104,7 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 ## 📝 Additional Notes
 
 - **Game Version**: 1.0  
-- **Last Updated**: July 3, 2025 
+- **Last Updated**: July 30, 2025 
 - **Demo Video**: _Coming Soon_ 🎥
 
 🎨 Sprites used: [Free Warrior 4 Direction Character - CraftPix](https://craftpix.net/freebies/free-warrior-4-direction-character-sprites/?num=1&count=367&sq=warrior&pos=14)
