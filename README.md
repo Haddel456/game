@@ -45,7 +45,6 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 - **Level 3**: Armored Warrior type.
 - **Level 4**: Basic  + Soldier + Armored Warrior type.
 
-- 
 
 ---
 
