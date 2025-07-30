@@ -54,7 +54,11 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 |------------------|------------------------|
 | Grab Enemy       | Left Mouse Button (Hold) |
 | Throw Enemy      | Drag Mouse Upward      |
-| Pause Game       | Pause  Button                  |
+| Play Game       | Play  Button           |
+| Quite Game       | Quite  Button           |
+| Pause Game       | Pause  Button           |
+| Volume Control   | Volume Button               |
+| Show Instructions| Instructions Button         |
 
 ---
 
