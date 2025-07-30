@@ -20,8 +20,8 @@ public class WarriorData
     public float attackRate = 1f;
 
     [Header("Mouse Interaction")]
-    public float killHeightPercentage = 0.6f;
-    public float dragResistance = 1f; // Higher = harder to drag
+    public float killHeightPercentage = 0.3f;
+    public float dragResistance = 0.004f; // Higher = harder to drag
 }
 
 [System.Serializable]
