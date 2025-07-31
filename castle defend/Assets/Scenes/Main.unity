@@ -1056,6 +1056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuScene: Main
   gameScene: Game
+  game1Scene: Game1
+  game2Scene: Game2
   levelCompleteScene: NextLevel
   gameOverScene: GameOver
   gameWinScene: GameWin

@@ -6,8 +6,10 @@ public class GameManager : MonoBehaviour
 {
     [Header("Scene Names")]
     [SerializeField] private string mainMenuScene = "Main";
-    [SerializeField] private string gameScene = "GameScene";
-    [SerializeField] private string levelCompleteScene = "LevelComplete";
+    [SerializeField] private string gameScene = "Game";   // For level 1 and 2 
+    [SerializeField] private string game1Scene = "Game1";    // For level 3
+    [SerializeField] private string game2Scene = "Game2";    // For level 4
+    [SerializeField] private string levelCompleteScene = "NextLevel";
     [SerializeField] private string gameOverScene = "GameOver";
     [SerializeField] private string gameWinScene = "GameWin";
 
@@ -55,25 +57,25 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
         Debug.Log($"Scene loaded: {scene.name}, Current Level: {currentLevel}");
 
-        // Initialize the scene based on which one was loaded
-        switch (scene.name)
+        // Check if the loaded scene is any of our game scenes
+        if (scene.name == gameScene || scene.name == game1Scene || scene.name == game2Scene)
         {
-            case "GameScene":
-            case "Game": 
-                StartCoroutine(InitializeGameSceneDelayed());
-                break;
-            case "LevelComplete":
-            case "NextLevel": 
-                InitializeLevelCompleteScene();
-                break;
-            case "GameOver":
-                InitializeGameOverScene();
-                break;
-            case "GameWin":
-                InitializeGameWinScene();
-                break;
+            StartCoroutine(InitializeGameSceneDelayed());
+        }
+        else if (scene.name == levelCompleteScene)
+        {
+            InitializeLevelCompleteScene();
+        }
+        else if (scene.name == gameOverScene)
+        {
+            InitializeGameOverScene();
+        }
+        else if (scene.name == gameWinScene)
+        {
+            InitializeGameWinScene();
         }
     }
 
@@ -200,40 +202,51 @@ public class GameManager : MonoBehaviour
         WarriorSpawner.OnGameWon -= OnGameWon;
     }
 
-    // Public methods for UI buttons
+
+    private string GetGameSceneForCurrentLevel()
+    {
+        switch (currentLevel)
+        {
+            case 1:
+            case 2:
+                return gameScene;
+            case 3:
+                return game1Scene;
+            case 4:
+                return game2Scene;
+            default:
+                Debug.LogWarning($"Unexpected level {currentLevel}, defaulting to {gameScene}");
+                return gameScene;
+        }
+    }
+
+    // Update all scene-loading methods to use GetGameSceneForCurrentLevel()
     public void StartGame()
     {
         currentLevel = 1;
         gameWon = false;
         gameLost = false;
-        LoadScene(gameScene);
+        LoadScene(GetGameSceneForCurrentLevel());
     }
 
     public void NextLevel()
     {
-        if (currentLevel <= maxLevels)
+        if (currentLevel < maxLevels)
         {
             currentLevel++;
-            LoadScene(gameScene);
+            LoadScene(GetGameSceneForCurrentLevel());
         }
-        else
+        else if (currentLevel == maxLevels)
         {
-            // This shouldn't happen, but just in case
+            // This handles the case where player completes level 4
             LoadScene(gameWinScene);
         }
     }
 
     public void RetryLevel()
     {
-        //// Keep the same level number
-        //if (!gameLost && !isMiddleOfGame)
-        //{
-        //    currentLevel--;
-            
-        //}
         gameLost = false;
-
-        LoadScene(gameScene);
+        LoadScene(GetGameSceneForCurrentLevel());
     }
 
     public void GoToMainMenu()

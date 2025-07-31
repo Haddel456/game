@@ -6,7 +6,6 @@ using System.Linq;
 public class WarriorSpawner : MonoBehaviour
 {
     [Header("Configuration")]
-    [SerializeField] private WarriorDataSO warriorDataSO;
     [SerializeField] private int currentLevel = 1;
 
     [Header("Spawn Settings")]
@@ -22,6 +21,7 @@ public class WarriorSpawner : MonoBehaviour
     private bool levelActive = false;
     private int totalWarriorsToSpawn = 0;
     private int warriorsSpawned = 0;
+    private WarriorDataSO warriorDataSO;
 
     // Game State
     public enum GameState
