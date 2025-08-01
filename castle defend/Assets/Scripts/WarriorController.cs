@@ -72,6 +72,7 @@ public class WarriorController : MonoBehaviour
         {
             CheckKillHeight();
         }
+
     }
 
     private void CheckKillHeight()
@@ -244,8 +245,11 @@ public class WarriorController : MonoBehaviour
         // Stop any residual velocity from dragging
         rb.velocity = Vector2.zero;
 
+        // Check if warrior is in forbidden castle zone
+        Vector3 adjustedTargetPosition = GetSafeDropPosition();
+
         // Set target position: X where released, Y where originally picked up
-        targetPosition = new Vector3(transform.position.x, dragStartPosition.y, transform.position.z);
+        targetPosition = new Vector3(adjustedTargetPosition.x, dragStartPosition.y, transform.position.z);
 
 
         // Check if warrior should die based on current height
@@ -267,6 +271,42 @@ public class WarriorController : MonoBehaviour
             isFallingBack = true;
             rb.gravityScale = 0f;
         }
+    }
+
+    private Vector3 GetSafeDropPosition()
+    {
+        // Find the castle
+        GameObject castle = GameObject.FindGameObjectWithTag("ourcastle");
+        if (castle == null) return transform.position;
+
+        // Get castle bounds
+        Collider2D castleCollider = castle.GetComponent<Collider2D>();
+        if (castleCollider == null) return transform.position;
+
+        Bounds castleBounds = castleCollider.bounds;
+
+        // Define forbidden zone (slightly larger than castle for buffer)
+        float forbiddenZoneBuffer = 1f; // Adjust this value as needed
+        float leftBoundary = castleBounds.min.x - forbiddenZoneBuffer;
+        float rightBoundary = castleBounds.max.x + forbiddenZoneBuffer;
+        float topBoundary = castleBounds.max.y + forbiddenZoneBuffer;
+        float bottomBoundary = castleBounds.min.y - forbiddenZoneBuffer;
+
+        Vector3 currentPos = transform.position;
+
+        // Check if warrior is in forbidden zone
+        bool inForbiddenZone = currentPos.x >= leftBoundary && currentPos.x <= rightBoundary &&
+                              currentPos.y >= bottomBoundary && currentPos.y <= topBoundary;
+
+        if (inForbiddenZone)
+        {
+            // Calculate safe drop position at the door (left side of castle)
+            float doorXPosition = castleBounds.min.x - 0.5f; // Slightly to the left of castle
+            return new Vector3(doorXPosition, currentPos.y, currentPos.z);
+        }
+
+        // If not in forbidden zone, return current position
+        return currentPos;
     }
 
     public bool IsAlive() { return !isDead; }

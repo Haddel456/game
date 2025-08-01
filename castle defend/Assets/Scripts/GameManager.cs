@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
             spawner.SetWarriorDataSO(warriorDataSO);
 
             // Subscribe to level completion events
+            UnsubscribeFromSpawnerEvents();
             WarriorSpawner.OnLevelCompleted += OnLevelCompleted;
             WarriorSpawner.OnGameLost += OnGameLost;
             WarriorSpawner.OnGameWon += OnGameWon;

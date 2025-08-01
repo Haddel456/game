@@ -57,7 +57,7 @@ MonoBehaviour:
     damageMultiplier: 1
     minSpawnDelay: 0.5
     maxSpawnDelay: 5
-    spawnYRange: {x: -13, y: 0}
+    spawnYRange: {x: -13, y: -2}
     spawnXPosition: -27
   - levelNumber: 2
     levelName: Reinforcement
@@ -65,14 +65,14 @@ MonoBehaviour:
     - warriorType: 0
       count: 0
     - warriorType: 1
-      count: 13
+      count: 15
     - warriorType: 2
       count: 0
     speedMultiplier: 1.2
     damageMultiplier: 1.1
     minSpawnDelay: 0.5
     maxSpawnDelay: 5
-    spawnYRange: {x: -13, y: 0}
+    spawnYRange: {x: -13, y: -2}
     spawnXPosition: -27
   - levelNumber: 3
     levelName: Heavy Assault
@@ -82,25 +82,25 @@ MonoBehaviour:
     - warriorType: 1
       count: 0
     - warriorType: 2
-      count: 15
+      count: 17
     speedMultiplier: 1.6
     damageMultiplier: 1.2
     minSpawnDelay: 0.5
     maxSpawnDelay: 5
-    spawnYRange: {x: -13, y: 0}
+    spawnYRange: {x: -13, y: -2}
     spawnXPosition: -27
   - levelNumber: 4
     levelName: Final Stand
     warriorSpawns:
     - warriorType: 0
-      count: 4
-    - warriorType: 1
       count: 6
+    - warriorType: 1
+      count: 8
     - warriorType: 2
-      count: 10
+      count: 12
     speedMultiplier: 2
     damageMultiplier: 1.3
     minSpawnDelay: 0.5
     maxSpawnDelay: 5
-    spawnYRange: {x: -13, y: 0}
+    spawnYRange: {x: -13, y: -2}
     spawnXPosition: -27

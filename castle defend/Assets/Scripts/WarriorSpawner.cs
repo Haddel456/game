@@ -185,7 +185,8 @@ public class WarriorSpawner : MonoBehaviour
 
         // Calculate spawn position
         float spawnY = Random.Range(currentLevelConfig.spawnYRange.x, currentLevelConfig.spawnYRange.y);
-        Vector3 spawnPosition = new Vector3(currentLevelConfig.spawnXPosition, spawnY, 0f);
+        float spawnZ = -warriorsSpawned * 0.01f; // Each warrior gets slightly different Z position
+        Vector3 spawnPosition = new Vector3(currentLevelConfig.spawnXPosition, spawnY, spawnZ);
 
         // Spawn the warrior
         GameObject warrior = Instantiate(warriorData.prefab, spawnPosition, Quaternion.identity);
