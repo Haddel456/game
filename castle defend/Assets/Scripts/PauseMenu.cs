@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pausMenu;
     [SerializeField] GameObject pauseButton;
+    [SerializeField] GameObject homeButton;
 
     public void Pause()
     {
@@ -23,7 +24,6 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-
     public void Restart()
     {
         if (GameManager.Instance != null)
@@ -31,6 +31,19 @@ public class PauseMenu : MonoBehaviour
             GameManager.Instance.RetryLevel();
         }
         Time.timeScale = 1;
+    }
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1; 
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.GoToMainMenu();
+        }
+        else
+        {
+            // Fallback in case GameManager isn't available
+            SceneManager.LoadScene("Main");
+        }
     }
 
 }

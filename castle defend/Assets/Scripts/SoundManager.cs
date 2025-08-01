@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 
@@ -60,12 +59,13 @@ public class SoundManager : MonoBehaviour
             soundOff.enabled = false;
         }
 
-        else {
+        else
+        {
             soundOn.enabled = false;
             soundOff.enabled = true;
         }
 
-        
+
     }
 
 

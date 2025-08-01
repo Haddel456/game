@@ -29,7 +29,7 @@ MonoBehaviour:
     warriorSprite: {fileID: 0}
     health: 100
     damage: 1
-    baseSpeed: 1.5
+    baseSpeed: 1.8
     attackRate: 0
     killHeightPercentage: 0.5
     dragResistance: 1.5
@@ -39,7 +39,7 @@ MonoBehaviour:
     warriorSprite: {fileID: 0}
     health: 100
     damage: 2
-    baseSpeed: 1
+    baseSpeed: 1.3
     attackRate: 0
     killHeightPercentage: 0.5
     dragResistance: 2

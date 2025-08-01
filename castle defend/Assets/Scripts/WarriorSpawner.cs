@@ -12,8 +12,8 @@ public class WarriorSpawner : MonoBehaviour
     [SerializeField] private Transform spawnParent; // Parent object for spawned warriors
 
     [Header("Castle Reference")]
-    [SerializeField] private GameObject castle; // Reference to your castle
-    [SerializeField] private HealthComponent castleHealth; // Castle's health component
+    private GameObject castle; // Reference to your castle
+    private HealthComponent castleHealth; // Castle's health component
 
     private LevelConfiguration currentLevelConfig;
     private List<GameObject> activeWarriors = new List<GameObject>();

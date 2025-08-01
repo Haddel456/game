@@ -27,8 +27,6 @@ public class WarriorController : MonoBehaviour
     private bool deathEventFired = false; // Prevent multiple death events
     private Vector3 targetPosition; // Where warrior should land
 
-    [Header("Death Effects")]
-    [SerializeField] private GameObject ghostPrefab;
 
     // Events
     public static event Action OnWarriorDeath;
@@ -62,6 +60,7 @@ public class WarriorController : MonoBehaviour
     {
         if (hasStopped && targetHealth != null && targetHealth.IsAlive() && !isDead)
         {
+            animator.SetTrigger("StartAttack");
             if (Time.time >= nextAttackTime)
             {
                 AttackCastle();
@@ -203,7 +202,6 @@ public class WarriorController : MonoBehaviour
             rb.gravityScale = 0f;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             Debug.Log("castle is attacked");
-            animator.SetTrigger("StartAttack");
 
             targetHealth = other.GetComponent<HealthComponent>();
             if (targetHealth == null)
@@ -212,6 +210,16 @@ public class WarriorController : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("ourcastle"))
+        {
+            hasStopped = false;
+            targetHealth = null;
+        }
+    }
+
 
     public void OnDragStart()
     {
@@ -223,7 +231,8 @@ public class WarriorController : MonoBehaviour
         rb.gravityScale = 0f;
         rb.drag = 0f; // Remove drag for smoother mouse following
         rb.velocity = Vector2.zero;
-
+        hasStopped = false;
+        animator.SetTrigger("ReRun");
     }
 
     public void OnDragStop()

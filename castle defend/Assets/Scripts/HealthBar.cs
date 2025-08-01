@@ -96,7 +96,6 @@ public class HealthBar : MonoBehaviour
             UpdateHealthColor(targetHealth);
         }
 
-        Debug.Log($"Health updated: {healthPercentage:F2} ({targetHealth:F2})");
     }
 
     private void UpdateHealthColor(float healthPercentage)
