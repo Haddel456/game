@@ -10,7 +10,8 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 - [Controls](#controls)  
 - [Objectives & Goals](#objectives--goals)  
 - [Game Mechanics & Features](#game-mechanics--features)  
-- [System Requirements](#system-requirements)  
+- [System Requirements](#system-requirements)
+- [Screenshots](#Screenshots)
 - [Additional Notes](#additional-notes)  
 
 ---
@@ -19,7 +20,7 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 
 - **Genre**: 2D Action / Casual Defense  
 - **Platform**: Windows (Unity Engine)  
-- **Developer**: Hadeel Halaseh , Malik karmi 
+- **Developer**: Hadeel Halaseh , Malik karmi , and Shorouq Mohammad
 
 **Castle Defense** challenges players to grab and toss cartoon-style enemies before they reach and damage your castle. With each level, enemy types evolve and grow more dangerous.
 
@@ -105,10 +106,34 @@ Welcome to **Castle Defense** – a fast-paced 2D defense game built with Unity 
 
 ---
 
+## 📸 Screenshots
+
+- **Main Menu**
+![Main Menu](https://github.com/user-attachments/assets/528d1832-7ef4-4fff-bfcd-69d2b05fedfd)
+
+- **Game Instructions**
+![Game Instructions](https://github.com/user-attachments/assets/851d0745-dc1d-4b68-a9c4-633ccc8a8670)
+
+- **Level 1**
+![Level 1](https://github.com/user-attachments/assets/5cfab915-4504-4a50-871a-a7494f04858e)
+
+- **Level 2**
+![Level 2](https://github.com/user-attachments/assets/8f401252-eece-4718-bd33-2b8bcb042e98)
+
+- **Level 3**
+![Level 3](https://github.com/user-attachments/assets/35234d8a-090a-4871-a67d-65a0b42d4d81)
+
+- **Level 4**
+![Level 4](https://github.com/user-attachments/assets/b83fc008-6542-47ed-8792-8f0885e17b50)
+
+ 
+
+---
+
 ## 📝 Additional Notes
 
 - **Game Version**: 1.0  
-- **Last Updated**: July 30, 2025 
+- **Last Updated**: August 2, 2025 
 - **Demo Video**: _Coming Soon_ 🎥
 
 🎨 Sprites used: [Free Warrior 4 Direction Character - CraftPix](https://craftpix.net/freebies/free-warrior-4-direction-character-sprites/?num=1&count=367&sq=warrior&pos=14)
